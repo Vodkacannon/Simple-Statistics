@@ -18,32 +18,32 @@ double vodka_sum(const std::string& strSet){
 
 	for(int index = 0; index < intLen; index++){ //loop thru. string
 
-			if(strSet.at(index) == '-'){
+		if(strSet.at(index) == '-'){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(strSet.at(index) == '.'){
+		}if(strSet.at(index) == '.'){
 			
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(isdigit(strSet.at(index))){
+		}if(isdigit(strSet.at(index))){
 
-				strNum += strSet.at(index);
-
-			}
-
-
-			if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
-		
-				dblNum = atof( strNum.c_str() );
-
-				strNum = "";
-
-				sum += dblNum;
-
-			}
+			strNum += strSet.at(index);
 
 		}
+
+
+		if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
+		
+			dblNum = atof( strNum.c_str() );
+
+			strNum = "";
+
+			sum += dblNum;
+
+		}
+
+	}
 
 	return sum;
 
@@ -63,41 +63,39 @@ double vodka_avg(const std::string& strSet){
 
 	for(int index = 0; index < intLen; index++){ //loop thru. string
 
-			if(strSet.at(index) == '-'){
+		if(strSet.at(index) == '-'){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(strSet.at(index) == '.'){
+		}if(strSet.at(index) == '.'){
 			
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(isdigit(strSet.at(index))){
+		}if(isdigit(strSet.at(index))){
 
-				strNum += strSet.at(index);
-
-
-
-			}
-
-
-			if(index <= intLen - 1){
-
-				if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
-		
-					dblNum = atof(strNum.c_str());
-
-					strNum = "";
-
-					intElementCount++;
-
-					sum += dblNum;
-
-				}
-
-			}
+			strNum += strSet.at(index);
 
 		}
 
+
+		if(index <= intLen - 1){
+
+			if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
+		
+				dblNum = atof(strNum.c_str());
+
+				strNum = "";
+
+				intElementCount++;
+
+				sum += dblNum;
+
+			}
+			
+		}
+		
+	}
+	
 	double avg = sum / intElementCount;
 
 	return avg;
@@ -116,37 +114,37 @@ double vodka_population_stdev(const std::string& strSet){
 
 	for(int index = 0; index < intLen; index++){ //loop thru. string
 
-			if(strSet.at(index) == '-'){
+		if(strSet.at(index) == '-'){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(strSet.at(index) == '.'){
+		}if(strSet.at(index) == '.'){
 			
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(isdigit(strSet.at(index))){
+		}if(isdigit(strSet.at(index))){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}
+		}
 
-			if(index <= intLen - 1){
+		if(index <= intLen - 1){
 
-				if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
-		
-					dblNum = atof(strNum.c_str());
+			if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
+	
+				dblNum = atof(strNum.c_str());
 
-					strNum = "";
+				strNum = "";
 
-					intElementCount++;
+				intElementCount++;
 
-					sum += dblNum;
-
-				}
+				sum += dblNum;
 
 			}
 
 		}
+
+	}
 
 	avg = sum / intElementCount;
 
@@ -154,35 +152,35 @@ double vodka_population_stdev(const std::string& strSet){
 
 	for(int index = 0; index < intLen; index++){ //loop thru. string
 
-			if(strSet.at(index) == '-'){
+		if(strSet.at(index) == '-'){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(strSet.at(index) == '.'){
+		}if(strSet.at(index) == '.'){
 			
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 
-			}if(isdigit(strSet.at(index))){
+		}if(isdigit(strSet.at(index))){
 
-				strNum += strSet.at(index);
+			strNum += strSet.at(index);
 				
-			}
+		}
 
-			if(index <= intLen - 1){
+		if(index <= intLen - 1){
 
-				if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
+			if(!isdigit(strSet.at(index)) && strSet.at(index) != '.' && strSet.at(index) != '-'){
 		
-					dblNum = atof(strNum.c_str());
+				dblNum = atof(strNum.c_str());
 
-					strNum = "";
+				strNum = "";
 
-					diff_from_mean_sum += (dblNum - avg) * (dblNum - avg);
-
-				}
+				diff_from_mean_sum += (dblNum - avg) * (dblNum - avg);
 
 			}
 
 		}
+
+	}
 
 	//End standard deviation
 
